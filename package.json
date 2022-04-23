@@ -1,0 +1,88 @@
+{
+    "name": "AAAASTARK",
+    "productName": "AAAASTARK",
+    "icon": "src/hassan.ico",
+    "version": "4.0.0",
+    "description": "The desktop application of AAAASTARK",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "electron .",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "publish": "electron-forge publish",
+        "lint": "echo \"No linting configured\"",
+        "build-installer": "electron-builder",
+        "install": "prebuild-install || node-gyp rebuild"
+    },
+    "build": {
+        "appId": "AAAASTARK",
+        "productName": "AAAASTARK",
+        "buildVersion": "4.0",
+        "copyright": "Copyright © 2021 AAAASTARK",
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "src/hassan.ico"
+        },
+        "nsis": {
+            "installerIcon": "src/hassan.ico",
+            "uninstallerIcon": "src/hassan.ico",
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true,
+            "deleteAppDataOnUninstall": true,
+            "createDesktopShortcut": true,
+            "uninstallDisplayName": "AAAASTARK",
+            "license": "src/MIT.txt"
+        }
+    },
+    "keywords": [],
+    "author": {
+        "name": "Muhammad Allah Rakha",
+        "email": "4444stark@gmail.com"
+    },
+    "license": "MIT",
+    "config": {
+        "forge": {
+            "packagerConfig": {},
+            "makers": [
+                {
+                    "name": "@electron-forge/maker-squirrel",
+                    "config": {
+                        "name": "AAAASTARK"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-zip",
+                    "platforms": [
+                        "darwin"
+                    ]
+                },
+                {
+                    "name": "@electron-forge/maker-deb",
+                    "config": {}
+                },
+                {
+                    "name": "@electron-forge/maker-rpm",
+                    "config": {}
+                }
+            ]
+        }
+    },
+    "dependencies": {
+        "electron-squirrel-startup": "^1.0.0",
+        "kerberos": "^1.1.6",
+        "mongodb": "^4.0.1",
+        "mongoose": "^5.13.4",
+        "mysql": "^2.18.1"
+    },
+    "devDependencies": {
+        "@electron-forge/cli": "^6.0.0-beta.58",
+        "@electron-forge/maker-deb": "^6.0.0-beta.58",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.58",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.58",
+        "@electron-forge/maker-zip": "^6.0.0-beta.58",
+        "electron": "13.1.7",
+        "sequelize": "^6.6.5"
+    }
+}

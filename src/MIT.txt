@@ -1,0 +1,10 @@
+Organization: AAAA STARK INDUSTRY
+Founder: AAAA STARK
+CEO: Muhammad Allah Rakha
+
+Developer Name: Muhammad Allah Rakha 
+Email: 4444stark@gmail.com
+Website: https://aaaastark.herokuapp.com
+GitHub: https://github.com/aaaastark
+
+Design by AAAASTARK
